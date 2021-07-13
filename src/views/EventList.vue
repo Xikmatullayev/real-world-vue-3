@@ -1,7 +1,17 @@
 <template>
-  <div class="events">
+  <div v-if="events" class="events">
     <h1>Event for Good</h1>
     <EventCard v-for="event in events" :key="event.id" :event="event" />
+  </div>
+  <div v-else class="lds-roller">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
 </template>
 
@@ -19,13 +29,16 @@ export default {
     };
   },
   created() {
-    EventService.getEvents().then((response) => {
-        console.log(response.data);
-        this.events = response.data;
-      })
-      .catch((error) => {
-        console.log("There was an error: " + error.message);
-      });
+    setTimeout(() => {
+      EventService.getEvents()
+        .then((response) => {
+          console.log(`Fetching ${response.data.length} events`);
+          this.events = response.data;
+        })
+        .catch((error) => {
+          console.log("There was an error: " + error.message);
+        });
+    }, 1000);
   },
 };
 </script>
