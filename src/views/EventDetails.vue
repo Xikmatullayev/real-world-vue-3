@@ -35,7 +35,7 @@ export default {
         .catch((error) => {
           console.log("There was an error:", error);
         });
-    }, 1000);
+    }, 200);
   },
 };
 </script>

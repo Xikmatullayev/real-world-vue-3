@@ -32,6 +32,28 @@
       "time": "11:00",
       "petsAllowed": false,
       "organizer": "Carey Wales"
+    },
+    {
+      "id": 5465461,
+      "category": "food",
+      "title": "Make food",
+      "description": "Save the health",
+      "location": "New York",
+      "date": "July 30, 2022",
+      "time": "18:00",
+      "petsAllowed": false,
+      "organizer": "Chef Burak"
+    },
+    {
+      "id": 2344741,
+      "category": "education",
+      "title": "Learn English",
+      "description": "Improve your speaking English.",
+      "location": "Vashington D.C.",
+      "date": "August 9, 2022",
+      "time": "11:00",
+      "petsAllowed": false,
+      "organizer": "Anna Mateo"
     }
   ]
 }
