@@ -10,7 +10,7 @@
         rel="prev"
         v-if="page != 1"
       >
-        &#60; Prev Page
+        &#60; Previous
       </router-link>
       <router-link
         id="page-next"
@@ -18,7 +18,7 @@
         rel="next"
         v-if="hasNextPage"
       >
-        Next Page &#62;
+        Next &#62;
       </router-link>
     </div>
   </div>
