@@ -1,10 +1,19 @@
 <template>
+  <div id="flashMessage" v-if="GStore.flashMessage">
+    {{ GStore.flashMessage }}
+  </div>
   <div id="nav">
     <router-link :to="{ name: 'EventList' }">Events</router-link> |
     <router-link :to="{ name: 'About' }">About</router-link>
   </div>
   <router-view :key="$route.fullPath" />
 </template>
+
+<script>
+export default {
+  inject: ["GStore"],
+};
+</script>
 
 <style>
 #app {
@@ -13,6 +22,21 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+#flashMessage {
+  padding: 20px 0;
+  color: #2c3e50;
+  animation: vuecolorfade 3s;
+}
+
+@keyframes vuecolorfade {
+  from {
+    background: #42b983;
+  }
+  to {
+    background: transparent;
+  }
 }
 
 #nav {
@@ -118,5 +142,4 @@
     transform: rotate(360deg);
   }
 }
-
 </style>
